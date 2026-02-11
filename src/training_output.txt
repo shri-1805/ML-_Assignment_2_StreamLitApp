@@ -1,0 +1,67 @@
+Machine Learning\ML_Assignment_2_StreamLitApp>python src/regression_pipeline.py
+Training model: Logistic_Regression
+-------------------- METRICS --------------------
+Accuracy: 0.7710843373493976
+Precision: 0.7547169811320755
+Recall: 0.8695652173913043
+F1-Score: 0.8080808080808081
+ROC-AUC: 0.7591069330199766
+MCC: 0.5361548576208784
+========================================
+Pickling model to: jobs/Logistic_Regression_model.pkl
+Successfully trained and pickled: jobs/Logistic_Regression_model.pkl
+Training model: Decision_Tree
+-------------------- METRICS --------------------
+Accuracy: 0.7228915662650602
+Precision: 0.7446808510638298
+Recall: 0.7608695652173914
+F1-Score: 0.7526881720430108
+ROC-AUC: 0.7182726204465335
+MCC: 0.4378333677438242
+========================================
+Pickling model to: jobs/Decision_Tree_model.pkl
+Successfully trained and pickled: jobs/Decision_Tree_model.pkl
+Training model: KNN
+-------------------- METRICS --------------------
+Accuracy: 0.7831325301204819
+Precision: 0.7592592592592593
+Recall: 0.8913043478260869
+F1-Score: 0.82
+ROC-AUC: 0.7699764982373678
+MCC: 0.562911154551447
+========================================
+Pickling model to: jobs/KNN_model.pkl
+Successfully trained and pickled: jobs/KNN_model.pkl
+Training model: Naive_Bayes
+-------------------- METRICS --------------------
+Accuracy: 0.7951807228915663
+Precision: 0.7959183673469388
+Recall: 0.8478260869565217
+F1-Score: 0.8210526315789474
+ROC-AUC: 0.7887779083431258
+MCC: 0.5837625648963977
+========================================
+Pickling model to: jobs/Naive_Bayes_model.pkl
+Successfully trained and pickled: jobs/Naive_Bayes_model.pkl
+Training model: Random_Forest
+-------------------- METRICS --------------------
+Accuracy: 0.7710843373493976
+Precision: 0.7547169811320755
+Recall: 0.8695652173913043
+F1-Score: 0.8080808080808081
+ROC-AUC: 0.7591069330199766
+MCC: 0.5361548576208784
+========================================
+Pickling model to: jobs/Random_Forest_model.pkl
+Successfully trained and pickled: jobs/Random_Forest_model.pkl
+Training model: XGBoost
+-------------------- METRICS --------------------
+Accuracy: 0.7469879518072289
+Precision: 0.7450980392156863
+Recall: 0.8260869565217391
+F1-Score: 0.7835051546391752
+ROC-AUC: 0.737367802585194
+MCC: 0.48480992900902026
+========================================
+Pickling model to: jobs/XGBoost_model.pkl
+Successfully trained and pickled: jobs/XGBoost_model.pkl

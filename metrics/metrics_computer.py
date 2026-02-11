@@ -35,9 +35,9 @@ def calculate_metrics(y_true, y_pred, y_prob=None):
             else:
                  metrics['AUC'] = roc_auc_score(y_true, y_prob, multi_class='ovr')
         except ValueError:
-            metrics['AUC'] = "N/A"
+            metrics['AUC'] = -1
     else:
-        metrics['AUC'] = "N/A"
+        metrics['AUC'] = -1
 
     # 3. Precision (weighted handles imbalance)
     metrics['Precision'] = precision_score(y_true, y_pred, average='weighted', zero_division=0)
@@ -52,3 +52,6 @@ def calculate_metrics(y_true, y_pred, y_prob=None):
     metrics['MCC'] = matthews_corrcoef(y_true, y_pred)
     
     return metrics
+
+if __name__ != '__main__':
+    compute_metrics = calculate_metrics
