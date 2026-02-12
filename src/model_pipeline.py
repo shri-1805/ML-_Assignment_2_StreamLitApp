@@ -59,7 +59,7 @@ for name, model in models.items():
     print("=" * 40)
 
     # Define the filename
-    filename = f"jobs/{name}_model.pkl"
+    filename = f"jobs/{name.lower()}_model.pkl"
     print(f"Pickling model to: {filename}")
     # Pickle the model to a file
     with open(filename, 'wb') as file:
