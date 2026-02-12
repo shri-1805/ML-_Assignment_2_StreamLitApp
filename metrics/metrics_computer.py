@@ -2,14 +2,15 @@ import numpy as np
 
 from sklearn.metrics import (
     accuracy_score,
-    roc_auc_score,
+    auc,
+    roc_curve,
     precision_score,
     recall_score,
     f1_score,
     matthews_corrcoef
 )
 
-def calculate_metrics(y_true, y_pred, y_prob=None):
+def calculate_metrics(y_true, y_pred, y_prob):
     """
     Computes performance metrics for a classification model.
     
@@ -26,18 +27,9 @@ def calculate_metrics(y_true, y_pred, y_prob=None):
     # 1. Accuracy
     metrics['Accuracy'] = accuracy_score(y_true, y_pred)
     
-    # 2. AUC Score (Handles binary and multiclass cases)
-    if y_prob is not None:
-        try:
-            # For binary classification, y_prob usually needs to be 1D array of positive class probs
-            if len(np.unique(y_true)) == 2:
-                 metrics['AUC'] = roc_auc_score(y_true, y_prob[:, 1])
-            else:
-                 metrics['AUC'] = roc_auc_score(y_true, y_prob, multi_class='ovr')
-        except ValueError:
-            metrics['AUC'] = -1
-    else:
-        metrics['AUC'] = -1
+    # 2. AUC Score
+    fpr, tpr, thresholds = roc_curve(y_true, y_prob)
+    metrics['AUC'] = auc(fpr, tpr)
 
     # 3. Precision (weighted handles imbalance)
     metrics['Precision'] = precision_score(y_true, y_pred, average='weighted', zero_division=0)
