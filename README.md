@@ -118,27 +118,27 @@ This is a <b>multivariate dataset</b> involving 14 key clinical attributes used 
   <tbody>
     <tr>
       <td><b>Logistic Regression</b></td>
-      <td>Often serves as a strong baseline; performs well when the relationship between features and the target is relatively linear.</td>
+      <td>Often serves as a strong baseline; performs well when the relationship between features and the target is relatively linear. in this dataset, it has performed well with excellent accuracy and AUC scores.</td>
     </tr>
     <tr>
       <td><b>Decision Tree</b></td>
-      <td>Prone to overfitting on this small dataset; provides high interpretability but may struggle with generalization without pruning.</td>
+      <td>Prone to overfitting on small dataset; provides high interpretability but may struggle with generalization without pruning. Here, decision tree is the least well performing. It would require careful pruning to generalize better.</td>
     </tr>
     <tr>
       <td><b>kNN</b></td>
-      <td>Performance is highly sensitive to the choice of 'k' and requires feature scaling (like normalization) since it is distance-based.</td>
+      <td>Performance is highly sensitive to the choice of 'k' and requires feature scaling (like normalization) since it is distance-based. Here kNN has the highest accuracy out of all models. It has been trained well.</td>
     </tr>
     <tr>
       <td><b>Naive Bayes</b></td>
-      <td>Efficient and handles categorical data well, though it assumes feature independence which may not strictly hold here.</td>
+      <td>Efficient and handles categorical data well, though it assumes feature independence which may not strictly hold here. It gives a decent performance for this dataset.</td>
     </tr>
     <tr>
       <td><b>Random Forest (Ensemble)</b></td>
-      <td>Usually offers high accuracy by reducing variance through bagging; robust against outliers in clinical data.</td>
+      <td>Usually offers high accuracy by reducing variance through bagging; robust against outliers in clinical data. This model gives the top performance for this particular dataset. It has the highest AUC over the test dataset.</td>
     </tr>
     <tr>
       <td><b>XGBoost (Ensemble)</b></td>
-      <td>Typically the top performer; uses gradient boosting to minimize errors, though it requires careful hyperparameter tuning.</td>
+      <td>Typically the top performer; uses gradient boosting to minimize errors, though it requires careful hyperparameter tuning. For this small dataset, xgboost is not the top performer. It needs much larger dataset and careful tuning to get better accuracy scores.</td>
     </tr>
   </tbody>
 </table>
