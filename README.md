@@ -50,57 +50,57 @@ This is a <b>multivariate dataset</b> involving 14 key clinical attributes used 
   <tbody>
     <tr>
       <td><b>Logistic Regression</b></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>0.8152</td>
+      <td>0.8953</td>
+      <td>0.8168</td>
+      <td>0.8152</td>
+      <td>0.8135</td>
+      <td>0.6254</td>
     </tr>
     <tr>
       <td><b>Decision Tree</b></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>0.7609</td>
+      <td>0.7580</td>
+      <td>0.7609</td>
+      <td>0.7609</td>
+      <td>0.7609</td>
+      <td>0.5160</td>
     </tr>
     <tr>
       <td><b>kNN</b></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>0.8261</td>
+      <td>0.8778</td>
+      <td>0.8332</td>
+      <td>0.8261</td>
+      <td>0.8230</td>
+      <td>0.6517</td>
     </tr>
     <tr>
       <td><b>Naive Bayes</b></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>0.8152</td>
+      <td>0.8766</td>
+      <td>0.8198</td>
+      <td>0.8152</td>
+      <td>0.8125</td>
+      <td>0.6274</td>
     </tr>
     <tr>
       <td><b>Random Forest (Ensemble)</b></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>0.8152</td>
+      <td>0.9000</td>
+      <td>0.8152</td>
+      <td>0.8152</td>
+      <td>0.8143</td>
+      <td>0.6247</td>
     </tr>
     <tr>
       <td><b>XGBoost (Ensemble)</b></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>0.8043</td>
+      <td>0.8924</td>
+      <td>0.8040</td>
+      <td>0.8043</td>
+      <td>0.8038</td>
+      <td>0.6027</td>
     </tr>
   </tbody>
 </table>
