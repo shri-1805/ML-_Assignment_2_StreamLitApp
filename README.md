@@ -1,29 +1,144 @@
-a. Problem Statement
-  Cardiovascular disease (CVD) has become India's leading cause of mortality, accounting for 31% of all deaths as of 2025. Alarmingly, the ICMR-NCDIR 2024 report reveals that four Indians suffer a heart attack every minute, with a 13% surge in cases among adults under 45 since 2020. Unlike Western populations, heart disease strikes Indians nearly a decade earlier, often progressing silently until it reaches an advanced, irreversible stage.
-  The Indian healthcare landscape faces significant challenges, including a shortage of specialized cardiologists in rural areas and a high prevalence of "silent" heart attacks. Consequently, there is an urgent need for an automated, machine-learning-based prediction system. Such a tool can leverage clinical data to provide early-stage screening and risk assessment, empowering primary healthcare providers to intervene before a major cardiac event occurs, thereby reducing the immense socioeconomic burden of premature mortality.
-  The primary goal is to predict the presence of heart disease in a patient based on clinical and physiological data. This is a binary classification problem where the target variable indicates whether a patient has heart disease (1) or does not (0). By analyzing features like age, cholesterol levels, and maximum heart rate, we aim to build a predictive model that can assist healthcare providers in early diagnosis.
+# Heart Disease Prediction Analysis
 
-b. Dataset Description
-This is a multivariate type of dataset involving a variety of separate mathematical or statistical variables, multivariate numerical data analysis. It is composed of 14 attributes which are age, sex, chest pain type, resting blood pressure, serum cholesterol, fasting blood sugar, resting electrocardiographic results, maximum heart rate achieved, exercise-induced angina, oldpeak — ST depression induced by exercise relative to rest, the slope of the peak exercise ST segment, number of major vessels and Thalassemia. 
-This database includes 76 attributes, but all published studies relate to the use of a subset of 14 of them. The Cleveland database is the only one used by ML researchers to date. One of the major tasks on this dataset is to predict based on the given attributes of a patient that whether that particular person has heart disease or not and other is the experimental task to diagnose and find out various insights from this dataset which could help in understanding the problem more.
+<hr>
 
-https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data
+## <a id="problem-statement"></a>a. Problem Statement
+<p align="justify">
+Cardiovascular disease (CVD) has become India's leading cause of mortality, accounting for <b>31% of all deaths</b> as of 2025. Alarmingly, the ICMR-NCDIR 2024 report reveals that <b>four Indians suffer a heart attack every minute</b>, with a 13% surge in cases among adults under 45 since 2020. Unlike Western populations, heart disease strikes Indians nearly a decade earlier, often progressing silently until it reaches an advanced, irreversible stage. 
+</p>
 
-c. Models Used: Comparison Table
+<p align="justify">
+The Indian healthcare landscape faces significant challenges, including a shortage of specialized cardiologists in rural areas and a high prevalence of "silent" heart attacks. Consequently, there is an urgent need for an automated, machine-learning-based prediction system. Such a tool can leverage clinical data to provide <b>early-stage screening and risk assessment</b>, empowering primary healthcare providers to intervene before a major cardiac event occurs, thereby reducing the immense socioeconomic burden of premature mortality.
+</p>
 
-ML Model Name,Accuracy,AUC,Precision,Recall,F1,MCC
-Logistic Regression,,,,,,
-Decision Tree,,,,,,
-kNN,,,,,,
-Naive Bayes,,,,,,
-Random Forest (Ensemble),,,,,,
-XGBoost (Ensemble),,,,,,
+> **Goal:** To predict the presence of heart disease (Binary Classification: 0 = No Disease, 1 = Disease) using clinical and physiological data to assist in early medical intervention.
 
-d. Observations
-ML Model Name,Observation about model performance
-Logistic Regression,Often serves as a strong baseline; performs well when the relationship between features and the target is relatively linear.
-Decision Tree,Prone to overfitting on this small dataset; provides high interpretability but may struggle with generalization without pruning.
-kNN,Performance is highly sensitive to the choice of 'k' and requires feature scaling (like normalization) since it is distance-based.
-Naive Bayes,Efficient and handles categorical data well, though it assumes feature independence which may not strictly hold here.
-Random Forest (Ensemble),Usually offers high accuracy by reducing variance through bagging; robust against outliers in clinical data.
-XGBoost (Ensemble),Typically the top performer; uses gradient boosting to minimize errors, though it requires careful hyperparameter tuning.
+<hr>
+
+## <a id="dataset-description"></a>b. Dataset Description
+<p>
+This is a <b>multivariate dataset</b> involving 14 key clinical attributes used to determine heart health. While the original database contains 76 attributes, this study focuses on the standard subset of 14 features widely used by researchers.
+</p>
+
+### Key Attributes:
+<ul>
+  <li><b>Demographics:</b> Age, Sex</li>
+  <li><b>Pain & Symptoms:</b> Chest pain type (cp), Exercise-induced angina (exang)</li>
+  <li><b>Clinical Readings:</b> Resting blood pressure (trestbps), Serum cholesterol (chol), Fasting blood sugar (fbs)</li>
+  <li><b>Electrocardiographic Results:</b> restecg, Maximum heart rate achieved (thalach)</li>
+  <li><b>ST Segment Analysis:</b> Oldpeak (ST depression), Slope of the peak exercise ST segment</li>
+  <li><b>Advanced Imaging:</b> Number of major vessels (ca), Thalassemia (thal)</li>
+</ul>
+
+**Source:** [Kaggle Heart Disease Dataset](https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data)
+
+<hr>
+
+## <a id="models-used"></a>c. Models Used: Comparison Table
+<table width="100%">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th align="left">ML Model Name</th>
+      <th>Accuracy</th>
+      <th>AUC</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+      <th>MCC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Logistic Regression</b></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><b>Decision Tree</b></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><b>kNN</b></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><b>Naive Bayes</b></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><b>Random Forest (Ensemble)</b></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><b>XGBoost (Ensemble)</b></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+## <a id="observations"></a>d. Observations
+<table>
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th align="left" width="30%">ML Model Name</th>
+      <th align="left">Observation about model performance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Logistic Regression</b></td>
+      <td>Often serves as a strong baseline; performs well when the relationship between features and the target is relatively linear.</td>
+    </tr>
+    <tr>
+      <td><b>Decision Tree</b></td>
+      <td>Prone to overfitting on this small dataset; provides high interpretability but may struggle with generalization without pruning.</td>
+    </tr>
+    <tr>
+      <td><b>kNN</b></td>
+      <td>Performance is highly sensitive to the choice of 'k' and requires feature scaling (like normalization) since it is distance-based.</td>
+    </tr>
+    <tr>
+      <td><b>Naive Bayes</b></td>
+      <td>Efficient and handles categorical data well, though it assumes feature independence which may not strictly hold here.</td>
+    </tr>
+    <tr>
+      <td><b>Random Forest (Ensemble)</b></td>
+      <td>Usually offers high accuracy by reducing variance through bagging; robust against outliers in clinical data.</td>
+    </tr>
+    <tr>
+      <td><b>XGBoost (Ensemble)</b></td>
+      <td>Typically the top performer; uses gradient boosting to minimize errors, though it requires careful hyperparameter tuning.</td>
+    </tr>
+  </tbody>
+</table>
