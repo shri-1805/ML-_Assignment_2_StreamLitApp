@@ -29,12 +29,12 @@ with open(scaler_path, 'wb') as f:
 
 # 2. Define the Model Dictionary
 models = {
-    "Logistic_Regression": LogisticRegression(max_iter=500),
-    "Decision_Tree": DecisionTreeClassifier(),
+    "Logistic_Regression": LogisticRegression(random_state=42,max_iter=500),
+    "Decision_Tree": DecisionTreeClassifier(random_state=42),
     "KNN": KNeighborsClassifier(),
     "Naive_Bayes": GaussianNB(),
-    "Random_Forest": RandomForestClassifier(n_estimators=100),
-    "XGBoost": XGBClassifier(eval_metric='logloss')
+    "Random_Forest": RandomForestClassifier(random_state=42, n_estimators=100),
+    "XGBoost": XGBClassifier(random_state=42, eval_metric='logloss')
 }
 
 # 3. Train and Pickle
