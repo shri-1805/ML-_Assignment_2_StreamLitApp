@@ -38,7 +38,8 @@ if test_data is not None:
     df = pd.read_csv(test_data)
 
 # Import the scaler pickle file and apply
-dir = 'jobs\\'
+#dir = 'jobs\\' # for windows systems
+dir = 'jobs/'
 file_path = dir+'scaler.pkl' 
 with open(file_path, 'rb') as file:
     scaler = pickle.load(file)
